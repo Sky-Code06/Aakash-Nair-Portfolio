@@ -1,11 +1,11 @@
 # Aakash Nair — Personal Portfolio
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FSky-Code06%2Fportfolio)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FSky-Code06%2FAakash-Nair-Portfolio)
 
-> **Hardware-Software Co-Design & Full-Stack Engineering Portfolio**  
+> **Embedded Systems, IoT & AI/ML Engineering Portfolio**  
 > Electronics & Communication Engineering Junior at Vellore Institute of Technology (VIT).
 
-A modern, highly interactive, and responsive portfolio bridging the worlds of embedded hardware engineering (ESP32, Verilog, RF simulations) and modern web architectures (Next.js, React, Tailwind CSS, Framer Motion).
+A modern, highly interactive, and responsive portfolio highlighting autonomous edge intelligence, IoT sensor architectures, and embedded machine learning deployed on low-power silicon and real-time systems.
 
 ---
 
