@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Aakash Nair | Embedded Systems, IoT & AI/ML Engineer",
   description:
-    "Electronics & Communication Engineering Junior at VIT. Specializing in Embedded Systems, IoT Architectures, TinyML, and Edge Intelligence.",
+    "Electronics & Communication Engineering at VIT. Specializing in Embedded Systems, IoT Architectures, TinyML, and Edge Intelligence.",
   keywords: [
     "Aakash Nair",
     "VIT Vellore",
