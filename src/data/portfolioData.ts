@@ -47,6 +47,7 @@ export interface ResearchItem {
   keywords: string[];
   simulationTools: string[];
   keyContributions: string[];
+  paperUrl?: string;
   specs: { label: string; value: string }[];
 }
 
@@ -187,7 +188,7 @@ export const PORTFOLIO_DATA = {
         { label: "Architecture", value: "Event-Driven" },
         { label: "Engine", value: "Next.js / Canvas" },
       ],
-      githubUrl: "https://github.com/Sky-Code06/devforge-cloudcanvas",
+      githubUrl: "https://github.com/Sky-Code06/HackerStreet-Rebels",
       demoUrl: "https://devforge-cloudcanvas.vercel.app",
     },
     {
@@ -211,7 +212,7 @@ export const PORTFOLIO_DATA = {
         { label: "Settlement", value: "Min-Transfer Algo" },
         { label: "Deploy", value: "Vercel Zero-Config" },
       ],
-      githubUrl: "https://github.com/Sky-Code06/pokernight-pwa",
+      githubUrl: "https://github.com/Sky-Code06/PokerNight-PWA",
       demoUrl: "https://pokernight-pwa.vercel.app",
     },
     {
@@ -258,7 +259,7 @@ export const PORTFOLIO_DATA = {
         { label: "Algorithm", value: "Adaptive MPC" },
         { label: "Optimization", value: "Convex QP" },
       ],
-      githubUrl: "https://github.com/Sky-Code06/smartcharge-adapt-mpc",
+      githubUrl: "https://github.com/Sky-Code06/SmartCharge-Adapt",
     },
     {
       id: "vtop-vault",
@@ -281,7 +282,7 @@ export const PORTFOLIO_DATA = {
         { label: "Engine", value: "Vanilla JS / Manifest V3" },
         { label: "Impact", value: "Campus-Wide Adoption" },
       ],
-      githubUrl: "https://github.com/Sky-Code06/vtop-vault",
+      githubUrl: "https://github.com/Sky-Code06/VTOP-Vault",
     },
     {
       id: "store-inventory-command",
@@ -304,7 +305,7 @@ export const PORTFOLIO_DATA = {
         { label: "Auth", value: "PIN & RLS Security" },
         { label: "Logistics", value: "Automated WhatsApp" },
       ],
-      githubUrl: "https://github.com/Sky-Code06/store-inventory-command",
+      githubUrl: "https://github.com/Sky-Code06/Black-Market",
       demoUrl: "https://store-inventory-command.vercel.app",
     },
   ],
@@ -325,6 +326,7 @@ export const PORTFOLIO_DATA = {
       "Full electromagnetic wave solver verification yielding return loss S11 < -20 dB and mutual coupling S21 < -25 dB",
       "Envelope Correlation Coefficient (ECC) < 0.005 and diversity gain > 9.98 dB",
     ],
+    paperUrl: "https://github.com/Sky-Code06/6G-MIMO-Castle-Patch-Antenna",
     specs: [
       { label: "Sim Tool", value: "CST Studio Suite" },
       { label: "Isolation (S21)", value: "< -25 dB" },

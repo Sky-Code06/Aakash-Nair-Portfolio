@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { PORTFOLIO_DATA } from "@/data/portfolioData";
+import { GithubIcon } from "./Icons";
 import { 
   Radio, 
   Award, 
@@ -106,6 +107,21 @@ export function ResearchSection() {
                   </span>
                 ))}
               </div>
+
+              {/* View Simulation Repo Button */}
+              {paper.paperUrl && (
+                <div className="pt-2">
+                  <a
+                    href={paper.paperUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono font-medium border border-emerald-500/40 bg-emerald-950/40 hover:bg-emerald-900/40 text-emerald-300 transition-colors shadow-sm shadow-emerald-950/50"
+                  >
+                    <GithubIcon className="w-3.5 h-3.5" />
+                    <span>View CST Simulation &amp; Antenna Repo</span>
+                  </a>
+                </div>
+              )}
             </div>
 
             {/* Right Col: Interactive CST Studio Simulation Telemetry Card */}
