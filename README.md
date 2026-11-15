@@ -38,7 +38,7 @@ A modern, highly interactive, and responsive portfolio bridging the worlds of em
 5. **Featured Projects (3D Interactive Tilt Grid):**
    * **DevForge / CloudCanvas:** AWS hackathon-winning system design IDE.
    * **PokerNight PWA:** Offline-first PWA for game tracking & zero-sum debt settlement.
-   * **Edge-Computed Health Monitor:** Wearable sensor fusion device (Submitted for Invention Disclosure at VIT).
+   * **Synthesizable RTL Traffic Light Controller:** Verilog FSM with pedestrian request & emergency preemption.
    * **SmartCharge-Adapt:** Parameter-adaptive MPC framework for Li-ion battery packs in CVXPY & Simulink.
    * **VTOP Vault:** Automated course material harvester browser extension.
    * **Store Inventory Command Center:** Mobile-first Next.js/Supabase inventory management with automated WhatsApp dispatch.

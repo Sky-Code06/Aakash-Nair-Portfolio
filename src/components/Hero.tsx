@@ -18,13 +18,13 @@ import {
 } from "lucide-react";
 
 export function Hero() {
-  const [activeTab, setActiveTab] = useState<"esp32" | "cloud" | "rf">("esp32");
+  const [activeTab, setActiveTab] = useState<"verilog" | "cloud" | "rf">("verilog");
 
-  const telemetry = {
-    heartRate: "72 BPM",
-    spo2: "99%",
-    i2cStatus: "0x68 [MPU6050] OK | 0x57 [MAX30102] OK",
-    filterState: "Temporal Kalman Active",
+  const verilogTelemetry = {
+    fsmState: "S_NORTH_GREEN -> S_YELLOW",
+    pedestrianLatch: "Active (SR Latch Q=1)",
+    overrideState: "Emergency Preempt Ready",
+    clockDivision: "50MHz to 1Hz Verified",
   };
 
   return (
@@ -77,7 +77,7 @@ export function Hero() {
             {/* Quick stats / tags */}
             <div className="flex flex-wrap items-center gap-2 pt-1 font-mono text-xs">
               <span className="px-3 py-1 rounded-md bg-cyan-950/40 border border-cyan-800/40 text-cyan-300 flex items-center gap-1.5">
-                <Cpu className="w-3.5 h-3.5" /> Embedded Systems &amp; ESP32
+                <Cpu className="w-3.5 h-3.5" /> Verilog HDL &amp; RTL Design
               </span>
               <span className="px-3 py-1 rounded-md bg-purple-950/40 border border-purple-800/40 text-purple-300 flex items-center gap-1.5">
                 <Layers className="w-3.5 h-3.5" /> Full-Stack Next.js
@@ -149,14 +149,14 @@ export function Hero() {
 
                 <div className="flex items-center gap-1">
                   <button
-                    onClick={() => setActiveTab("esp32")}
+                    onClick={() => setActiveTab("verilog")}
                     className={`px-2 py-0.5 rounded text-[10px] font-mono transition-all ${
-                      activeTab === "esp32"
+                      activeTab === "verilog"
                         ? "bg-cyan-500/20 text-cyan-300 border border-cyan-500/40"
                         : "text-slate-400 hover:text-white"
                     }`}
                   >
-                    ESP32.c
+                    Verilog_FSM.v
                   </button>
                   <button
                     onClick={() => setActiveTab("cloud")}
@@ -183,37 +183,37 @@ export function Hero() {
 
               {/* Console Body */}
               <div className="p-4 sm:p-5 font-mono text-xs space-y-3 min-h-[310px] flex flex-col justify-between">
-                {activeTab === "esp32" && (
+                {activeTab === "verilog" && (
                   <div className="space-y-2.5 text-slate-300">
                     <div className="text-cyan-400 flex items-center justify-between text-[11px]">
-                      <span>// Edge-Computed Wearable Health Monitor</span>
+                      <span>// Synthesizable RTL Traffic Controller (FSM)</span>
                       <span className="text-emerald-400 flex items-center gap-1">
-                        <Activity className="w-3 h-3 animate-pulse" /> I2C Live
+                        <Activity className="w-3 h-3 animate-pulse" /> RTL Synthesized
                       </span>
                     </div>
                     <p className="text-slate-400 text-[11px]">
-                      ESP32-WROOM-32 @ 240MHz | RTOS Dual-Core
+                      FPGA Synthesis • Glitch-Free Moore FSM • Timing Verified
                     </p>
                     <div className="p-2.5 rounded-lg bg-black/50 border border-cyan-900/40 space-y-1 text-[11px]">
                       <div className="flex justify-between">
-                        <span className="text-slate-400">Heart Rate (MAX30102):</span>
-                        <span className="text-cyan-300 font-bold">{telemetry.heartRate}</span>
+                        <span className="text-slate-400">Current State:</span>
+                        <span className="text-cyan-300 font-bold">{verilogTelemetry.fsmState}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-slate-400">Blood Oxygen (SpO2):</span>
-                        <span className="text-cyan-300 font-bold">{telemetry.spo2}</span>
+                        <span className="text-slate-400">Pedestrian Latch:</span>
+                        <span className="text-cyan-300 font-bold">{verilogTelemetry.pedestrianLatch}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-slate-400">Motion Rejection:</span>
-                        <span className="text-emerald-400">MPU6050 Fused</span>
+                        <span className="text-slate-400">Emergency Override:</span>
+                        <span className="text-emerald-400">{verilogTelemetry.overrideState}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-slate-400">Patent / IP:</span>
-                        <span className="text-purple-300">VIT Invention Disclosure</span>
+                        <span className="text-slate-400">Clock Generator:</span>
+                        <span className="text-purple-300">{verilogTelemetry.clockDivision}</span>
                       </div>
                     </div>
                     <p className="text-slate-500 text-[10px]">
-                      void loop() &#123; apply_temporal_sensor_fusion(&amp;data); &#125;
+                      always @(posedge clk or negedge rst_n) begin state &lt;= next_state; end
                     </p>
                   </div>
                 )}

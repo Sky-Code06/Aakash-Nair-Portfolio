@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Aakash Nair | Hardware-Software Co-Design & Full-Stack Developer",
   description:
-    "Electronics & Communication Engineering Junior at VIT. Specializing in hardware-software co-design, edge wearables, and scalable web apps.",
+    "Electronics & Communication Engineering Junior at VIT. Specializing in hardware-software co-design, embedded systems, and scalable web apps.",
   keywords: [
     "Aakash Nair",
     "VIT Vellore",
