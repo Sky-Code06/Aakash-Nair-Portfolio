@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { PORTFOLIO_DATA } from "@/data/portfolioData";
+import { GithubIcon } from "./Icons";
 import { 
   Briefcase, 
   Calendar, 
@@ -55,7 +56,7 @@ export function ExperienceTimeline() {
             Industry <span className="text-gradient-purple">Experience</span> &amp; Hands-On Impact
           </h2>
           <p className="text-slate-400 text-base sm:text-lg">
-            Proven track record spanning enterprise systems integration, RTL digital logic design, and upcoming medical technology engineering.
+            Proven track record spanning enterprise systems integration, synthesizable RTL digital logic design, and embedded IoT architectures.
           </p>
         </div>
 
@@ -159,6 +160,21 @@ export function ExperienceTimeline() {
                           </span>
                         ))}
                       </div>
+
+                      {/* Optional GitHub Repo Link */}
+                      {exp.githubUrl && (
+                        <div className="pt-3">
+                          <a
+                            href={exp.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium border border-purple-500/40 bg-purple-950/40 hover:bg-purple-900/40 text-purple-300 transition-colors"
+                          >
+                            <GithubIcon className="w-3.5 h-3.5" />
+                            <span>View Synthesizable RTL Verilog Repo</span>
+                          </a>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </motion.div>

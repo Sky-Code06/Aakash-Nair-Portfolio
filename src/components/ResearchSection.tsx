@@ -146,23 +146,24 @@ export function ResearchSection() {
                   <div className="absolute inset-0 bg-[radial-gradient(#10b981_1px,transparent_1px)] [background-size:16px_16px] opacity-15" />
 
                   <div className="flex justify-between items-center text-[10px] text-slate-400 z-10">
-                    <span>MIMO Substrate: FR4 (&epsilon;r = 4.4, h = 1.6mm)</span>
-                    <span className="text-emerald-400">Castle Notch Active</span>
+                    <span>MIMO Substrate: Sub-THz Low-Loss</span>
+                    <span className="text-emerald-400">600 GHz Center Freq</span>
                   </div>
 
-                  {/* Geometric Castle Patch ASCII / Vector Representation */}
-                  <div className="z-10 flex items-center justify-center gap-6 my-auto">
+                  {/* 2x2 MIMO 4-Port Castle Patch with Via Fence Decoupling */}
+                  <div className="z-10 flex items-center justify-center gap-4 my-auto">
                     <div className="w-16 h-16 rounded-md border-2 border-dashed border-emerald-400/80 bg-emerald-500/10 flex flex-col items-center justify-center p-1 text-[9px] text-center text-emerald-300 shadow-lg shadow-emerald-500/10">
                       <div className="flex gap-1 mb-1">
                         <div className="w-2 h-2 bg-emerald-400 rounded-xs" />
                         <div className="w-2 h-2 bg-emerald-400 rounded-xs" />
                       </div>
-                      <span>Port 1</span>
+                      <span className="font-bold">Ports 1-2</span>
                     </div>
 
-                    <div className="flex flex-col items-center justify-center text-[10px] text-slate-400 font-mono">
-                      <span className="text-cyan-300 font-bold">S21 &lt; -25 dB</span>
-                      <span className="text-[9px] text-slate-500">&larr; Decoupled &rarr;</span>
+                    <div className="flex flex-col items-center justify-center text-[9px] text-slate-400 font-mono text-center">
+                      <span className="text-cyan-300 font-bold text-[10px]">Via Fence</span>
+                      <span className="text-emerald-400">&gt; 15 dB Isolation</span>
+                      <span className="text-[8px] text-slate-500">&larr; Decoupled &rarr;</span>
                     </div>
 
                     <div className="w-16 h-16 rounded-md border-2 border-dashed border-emerald-400/80 bg-emerald-500/10 flex flex-col items-center justify-center p-1 text-[9px] text-center text-emerald-300 shadow-lg shadow-emerald-500/10">
@@ -170,13 +171,13 @@ export function ResearchSection() {
                         <div className="w-2 h-2 bg-emerald-400 rounded-xs" />
                         <div className="w-2 h-2 bg-emerald-400 rounded-xs" />
                       </div>
-                      <span>Port 2</span>
+                      <span className="font-bold">Ports 3-4</span>
                     </div>
                   </div>
 
                   <div className="flex justify-between items-center text-[10px] text-slate-400 z-10 border-t border-white/5 pt-1">
-                    <span>Hexahedral Mesh: 1.2M Cells</span>
-                    <span className="text-emerald-300">Transient Solver</span>
+                    <span>Bandwidth: 80 GHz (13.3%)</span>
+                    <span className="text-emerald-300">Directivity: 9.04 dBi</span>
                   </div>
                 </div>
 
