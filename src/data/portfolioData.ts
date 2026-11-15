@@ -4,7 +4,7 @@ export interface ProjectItem {
   subtitle: string;
   description: string;
   detailedDescription?: string;
-  category: "Web & Cloud" | "Hardware & Embedded" | "Controls & Systems" | "Tools & Extensions";
+  category: "Embedded Systems & IoT" | "AI/ML & Controls" | "Web & Cloud" | "Tools & Extensions";
   tags: string[];
   badge?: string;
   highlights: string[];
@@ -30,10 +30,12 @@ export interface ExperienceItem {
 
 export interface SkillCategory {
   title: string;
+  badge: string;
   description: string;
   iconName: string;
   skills: { name: string; level?: string; icon?: string }[];
   accent: "cyan" | "purple" | "emerald";
+  footerNote: string;
 }
 
 export interface ResearchItem {
@@ -54,16 +56,16 @@ export interface ResearchItem {
 export const PORTFOLIO_DATA = {
   personal: {
     name: "Aakash Nair",
-    headline: "Electronics & Communication Engineering Junior at VIT | Hardware-Software Co-Design | Full-Stack Developer",
-    introText: "I build everything from edge-computed IoT systems and control frameworks to scalable web apps. Passionate about bridging embedded systems with modern software architecture.",
-    bio: "3rd-year B.Tech ECE student at Vellore Institute of Technology. I specialize in both hardware prototyping and full-stack web development, constantly upskilling in AI/ML, Python, Java, and PCB design.",
+    headline: "Electronics & Communication Engineering Junior at VIT | Embedded Systems • IoT • AI/ML & Edge Intelligence",
+    introText: "Engineering autonomous edge intelligence, IoT sensor architectures, and embedded machine learning. Passionate about deploying real-time TinyML models onto low-power silicon and bridging physical hardware with intelligent systems.",
+    bio: "3rd-year B.Tech ECE student at Vellore Institute of Technology. My primary engineering focus centers on Embedded Systems, IoT architecture, and applied AI/ML—specializing in on-device TinyML inference, deterministic sensor fusion, microcontrollers (ESP32 / ARM), signal processing, and low-latency hardware-software telemetry.",
     university: "Vellore Institute of Technology (VIT), Vellore",
     degree: "B.Tech in Electronics & Communication Engineering",
     graduationYear: "2027",
     email: "reachfortheskiez@gmail.com",
     phone: "+91 9591484191",
     location: "Bengaluru / Vellore, India",
-    statusBadge: "3rd-Year ECE @ VIT • Hardware-Software Co-Design",
+    statusBadge: "3rd-Year ECE @ VIT • Embedded Systems, IoT & AI/ML",
     socials: {
       github: "https://github.com/Sky-Code06",
       linkedin: "http://www.linkedin.com/in/aakash-nair-6205b5325",
@@ -74,45 +76,58 @@ export const PORTFOLIO_DATA = {
 
   skills: [
     {
-      title: "Web & Software",
-      description: "Modern, reactive, and scalable web applications from frontend interfaces to enterprise API orchestration.",
+      title: "Embedded Systems & IoT",
+      badge: "Core Domain",
+      description: "Microcontroller firmware, real-time sensor fusion, communication protocols, and low-power hardware interfacing.",
+      iconName: "Cpu",
+      accent: "emerald" as const,
+      skills: [
+        { name: "ESP32" },
+        { name: "Embedded C / C++" },
+        { name: "I2C / SPI / UART" },
+        { name: "Sensor Fusion (MPU6050)" },
+        { name: "Verilog HDL" },
+        { name: "KiCad PCB Design" },
+        { name: "FreeRTOS" },
+        { name: "IoT Protocols (MQTT/HTTP)" },
+      ],
+      footerNote: "⚡ Deterministic Timers • Hardware Interrupts • Bus Protocols",
+    },
+    {
+      title: "AI/ML & Edge Intelligence",
+      badge: "Core Domain",
+      description: "On-device TinyML, deep learning architectures, digital signal processing, and adaptive optimization.",
+      iconName: "BrainCircuit",
+      accent: "purple" as const,
+      skills: [
+        { name: "TinyML / Edge AI" },
+        { name: "Python (NumPy / SciPy)" },
+        { name: "TensorFlow / Keras" },
+        { name: "Autoencoders & SVMs" },
+        { name: "DSP (FFT & IIR Filters)" },
+        { name: "CVXPY Optimization" },
+        { name: "MATLAB & Simulink" },
+        { name: "Adaptive MPC" },
+      ],
+      footerNote: "🧠 On-Chip Inference • Spectral DSP • Quadratic Optimization",
+    },
+    {
+      title: "Software & Cloud Telemetry",
+      badge: "Supporting Systems",
+      description: "Systems programming, real-time IoT monitoring dashboards, serverless backends, and enterprise APIs.",
       iconName: "Globe",
       accent: "cyan" as const,
       skills: [
-        { name: "React" },
-        { name: "Next.js" },
+        { name: "Python" },
+        { name: "C/C++" },
+        { name: "Java" },
+        { name: "Streamlit Dashboards" },
+        { name: "Next.js & React" },
         { name: "Tailwind CSS" },
-        { name: "Vite" },
-        { name: "Supabase" },
-        { name: "Vercel" },
+        { name: "AWS Serverless (Lambda)" },
         { name: "MuleSoft API" },
       ],
-    },
-    {
-      title: "Hardware & Core ECE",
-      description: "Embedded microcontrollers, digital logic RTL design, simulation, and high-frequency electromagnetics.",
-      iconName: "Cpu",
-      accent: "purple" as const,
-      skills: [
-        { name: "ESP32" },
-        { name: "Verilog" },
-        { name: "KiCad" },
-        { name: "MATLAB" },
-        { name: "Simulink" },
-        { name: "CST Studio Suite" },
-        { name: "Control Systems" },
-      ],
-    },
-    {
-      title: "Languages",
-      description: "Low-level systems programming, object-oriented software engineering, and scientific computing.",
-      iconName: "Code2",
-      accent: "emerald" as const,
-      skills: [
-        { name: "Python" },
-        { name: "Java" },
-        { name: "C/C++" },
-      ],
+      footerNote: "🌐 Real-Time Telemetry • Serverless APIs • Microservices",
     },
   ],
 
@@ -156,17 +171,18 @@ export const PORTFOLIO_DATA = {
       id: "vibroshield-edge-shm",
       title: "VibroShield (Edge-SHM)",
       subtitle: "Autonomous Edge Structural Health Monitoring & TinyML Anomaly Detection",
-      description: "An autonomous edge computing system using an ESP32, MPU6050, 200 Hz digital signal processing, unsupervised TinyML autoencoders, and neuro-symbolic decision boundaries to monitor civil infrastructure in real time without cloud latency.",
+      description: "An autonomous edge IoT computing system using an ESP32, MPU6050, 200 Hz digital signal processing, unsupervised TinyML autoencoders, and neuro-symbolic decision boundaries to monitor civil infrastructure in real time without cloud latency.",
       detailedDescription: "Runs a complete embedded pipeline directly on an ESP32: 200 Hz hardware-timer acquisition, 40 Hz IIR low-pass filtering, 128-point local FFT, and TinyML autoencoder reconstruction error calculation to isolate structural anomalies and trigger physical relay/alarm mitigation and Streamlit telemetry.",
-      category: "Hardware & Embedded" as const,
-      tags: ["ESP32", "TinyML", "MPU6050", "IIR Filter", "FFT", "Streamlit", "Python"],
-      badge: "TinyML Edge Computing",
+      category: "Embedded Systems & IoT" as const,
+      tags: ["ESP32", "TinyML", "IoT Telemetry", "MPU6050", "IIR Filter", "FFT", "Streamlit", "Python"],
+      badge: "TinyML & IoT System",
       accent: "emerald" as const,
       featured: true,
       highlights: [
         "200 Hz hardware timer acquisition with 40 Hz IIR filtering and 128-point local FFT on ESP32",
-        "Unsupervised TinyML autoencoder reconstruction error scoring for anomaly isolation",
+        "Unsupervised TinyML autoencoder reconstruction error scoring for real-time anomaly isolation",
         "Neuro-symbolic decision fusion combining physical acceleration thresholds with SVM hyperplanes",
+        "Multi-modal mitigation driving 5V fail-safe relays, acoustic alarms, and live Streamlit IoT dashboard",
       ],
       metrics: [
         { label: "Acquisition", value: "200 Hz Timer" },
@@ -178,16 +194,16 @@ export const PORTFOLIO_DATA = {
     {
       id: "smartcharge-adapt",
       title: "SmartCharge-Adapt",
-      subtitle: "Parameter-Adaptive Constrained MPC for Li-Ion Battery Packs",
+      subtitle: "Parameter-Adaptive Constrained MPC for Series Li-Ion Battery Packs",
       description: "A Per-Cell Online Parameter-Adaptive Model Predictive Control framework for series Li-ion battery packs using Python CVXPY and MATLAB Simulink.",
-      detailedDescription: "Designed an advanced control strategy for series Li-ion battery packs. Combines parallel recursive least squares (RLS) for real-time internal resistance and state-of-health estimation with constrained convex quadratic program (QP) MPC to balance ultra-fast charging speed against thermal degradation.",
-      category: "Controls & Systems" as const,
-      tags: ["Python", "CVXPY", "MATLAB", "Simulink", "Control Systems", "Battery Management"],
-      badge: "Convex MPC Optimization",
+      detailedDescription: "Designed an advanced intelligent control strategy for series Li-ion battery packs. Combines parallel recursive least squares (RLS) for real-time internal resistance and state-of-health estimation with constrained convex quadratic program (QP) MPC to balance ultra-fast charging speed against thermal degradation.",
+      category: "AI/ML & Controls" as const,
+      tags: ["Python", "CVXPY", "MATLAB", "Simulink", "Adaptive MPC", "System Identification", "Battery Management"],
+      badge: "AI/ML & Adaptive Control",
       accent: "amber" as const,
       featured: true,
       highlights: [
-        "Formulated convex quadratic programs in CVXPY solved at 50Hz control cycles",
+        "Formulated convex quadratic programs in CVXPY solved at 50Hz real-time control cycles",
         "Parallel online RLS for real-time per-cell parameter adaptation under aging and temperature shifts",
         "MATLAB Simulink co-simulation with 2nd-order Equivalent Circuit Models (ECM)",
       ],
@@ -204,8 +220,8 @@ export const PORTFOLIO_DATA = {
       subtitle: "Op-Amp Active Filter Network & MATLAB Audio Toolbox Simulation",
       description: "An active 3-band analog audio equalizer (Bass, Mid, Treble) engineered with op-amp active filter topologies in NI Multisim and simulated in MATLAB Simulink Audio Toolbox.",
       detailedDescription: "Designed an analog audio signal processing chain utilizing active second-order Sallen-Key and bandpass operational amplifier filters. Provides independent boost/cut controls (+/-12 dB) for low-frequency bass (<250 Hz), midrange bandpass (250 Hz - 4 kHz), and high-frequency treble (>4 kHz) with complete Bode plot frequency and phase verification.",
-      category: "Hardware & Embedded" as const,
-      tags: ["Analog Circuits", "Op-Amps", "Active Filters", "NI Multisim", "MATLAB", "Simulink"],
+      category: "Embedded Systems & IoT" as const,
+      tags: ["Analog Circuits", "Active Filters", "Op-Amps", "NI Multisim", "MATLAB", "Simulink", "Audio DSP"],
       badge: "Analog Signal Processing",
       accent: "purple" as const,
       featured: true,
@@ -220,6 +236,29 @@ export const PORTFOLIO_DATA = {
         { label: "Simulation", value: "Multisim + Simulink" },
       ],
       githubUrl: "https://github.com/Sky-Code06/Active-3-Band-Audio-Equalizer",
+    },
+    {
+      id: "flower-recognition",
+      title: "Deep CNN vs. MobileNetV2 Vision Benchmark",
+      subtitle: "Comparative Computer Vision Study & Transfer Learning in TensorFlow/Keras",
+      description: "A comparative deep learning study benchmarking custom deep Convolutional Neural Networks (CNN) against MobileNetV2 transfer learning for computer vision classification in TensorFlow/Keras.",
+      detailedDescription: "Engineered an end-to-end computer vision pipeline exploring image augmentation, batch normalization, and dropout regularization. Demonstrated the performance-efficiency tradeoffs of lightweight mobile-oriented architectures vs. standard deep networks for resource-constrained edge vision.",
+      category: "AI/ML & Controls" as const,
+      tags: ["Python", "TensorFlow", "Keras", "Deep Learning", "CNN", "MobileNetV2", "Computer Vision"],
+      badge: "Deep Learning & Vision",
+      accent: "purple" as const,
+      featured: true,
+      highlights: [
+        "Benchmarked custom deep CNNs against MobileNetV2 pretrained feature extractors",
+        "Designed data augmentation pipelines with spatial transforms to prevent overfitting",
+        "Analyzed loss convergence, Top-1 accuracy, and parameter footprint for edge deployment",
+      ],
+      metrics: [
+        { label: "Framework", value: "TensorFlow / Keras" },
+        { label: "Architecture", value: "MobileNetV2 vs CNN" },
+        { label: "Domain", value: "Computer Vision" },
+      ],
+      githubUrl: "https://github.com/Sky-Code06/Flower-Recognition",
     },
     {
       id: "serverless-mental-health",
@@ -300,8 +339,8 @@ export const PORTFOLIO_DATA = {
     date: "Research Project",
     status: "To Be Published",
     authors: ["Aakash Nair (Lead Contributor)", "Collaborators & Faculty Guide"],
-    abstract: "A research project investigating a castle-shaped microstrip patch antenna converted into a MIMO configuration using CST Studio Suite simulations, prepared for IEEE publication. The slotted castle geometry introduces degenerate resonance modes and optimizes surface current distribution, significantly enhancing inter-element isolation and reducing envelope correlation coefficient (ECC) for high-speed multi-band wireless communications.",
-    keywords: ["MIMO Antenna", "Castle-Shaped Patch", "CST Studio Suite", "S-Parameters", "Mutual Coupling Reduction", "RF Design"],
+    abstract: "A research project investigating a castle-shaped microstrip patch antenna converted into a MIMO configuration using CST Studio Suite simulations, prepared for IEEE publication. The slotted castle geometry introduces degenerate resonance modes and optimizes surface current distribution, significantly enhancing inter-element isolation and reducing envelope correlation coefficient (ECC) for high-speed multi-band wireless communications and IoT links.",
+    keywords: ["MIMO Antenna", "Castle-Shaped Patch", "CST Studio Suite", "S-Parameters", "Mutual Coupling Reduction", "RF & Wireless IoT"],
     simulationTools: ["CST Studio Suite", "MATLAB", "Smith Chart Analysis"],
     keyContributions: [
       "Geometric castle-shape notch perturbation to achieve dual-band resonance and compact form factor",

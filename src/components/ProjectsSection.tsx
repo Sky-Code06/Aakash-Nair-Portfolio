@@ -13,9 +13,9 @@ export function ProjectsSection() {
 
   const categories = [
     "All",
+    "Embedded Systems & IoT",
+    "AI/ML & Controls",
     "Web & Cloud",
-    "Hardware & Embedded",
-    "Controls & Systems",
     "Tools & Extensions",
   ];
 
@@ -32,15 +32,15 @@ export function ProjectsSection() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-800/50 text-cyan-400 text-xs font-mono">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950/60 border border-emerald-800/50 text-emerald-400 text-xs font-mono">
             <Layers className="w-3.5 h-3.5" />
-            <span>PORTFOLIO SHOWCASE</span>
+            <span>TECHNICAL SHOWCASE</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Featured <span className="text-gradient-cyan">Projects</span> &amp; Inventions
+            Featured <span className="text-gradient-hardware">Embedded, IoT &amp; AI/ML</span> Projects
           </h2>
           <p className="text-slate-400 text-base sm:text-lg">
-            From AWS hackathon-winning developer platforms and patent-pending edge wearables, to MPC battery optimization and high-impact web apps.
+            From autonomous edge structural health monitoring and parameter-adaptive battery MPC, to analog active filter networks and serverless architectures.
           </p>
         </div>
 

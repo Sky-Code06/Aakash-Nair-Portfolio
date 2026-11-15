@@ -13,27 +13,28 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Aakash Nair | Hardware-Software Co-Design & Full-Stack Developer",
+  title: "Aakash Nair | Embedded Systems, IoT & AI/ML Engineer",
   description:
-    "Electronics & Communication Engineering Junior at VIT. Specializing in hardware-software co-design, embedded systems, and scalable web apps.",
+    "Electronics & Communication Engineering Junior at VIT. Specializing in Embedded Systems, IoT Architectures, TinyML, and Edge Intelligence.",
   keywords: [
     "Aakash Nair",
     "VIT Vellore",
-    "Hardware-Software Co-Design",
-    "Electronics and Communication Engineering",
-    "Full-Stack Developer",
+    "Embedded Systems",
+    "IoT",
+    "AI/ML",
+    "TinyML",
+    "Edge Intelligence",
     "ESP32",
-    "Next.js",
-    "Verilog",
-    "MuleSoft",
-    "IEEE MIMO Patch Antenna",
+    "Digital Signal Processing",
+    "Control Systems",
+    "Electronics and Communication Engineering",
     "VFS Global"
   ],
   authors: [{ name: "Aakash Nair" }],
   openGraph: {
-    title: "Aakash Nair | ECE Junior & Full-Stack Developer",
+    title: "Aakash Nair | Embedded Systems, IoT & AI/ML Engineer",
     description:
-      "Bridging embedded hardware prototyping with modern web and cloud architecture.",
+      "Engineering autonomous edge intelligence, IoT sensor architectures, and embedded machine learning.",
     type: "website",
   },
   icons: {

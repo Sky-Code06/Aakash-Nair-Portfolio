@@ -76,7 +76,7 @@ export function Navbar() {
                 {PORTFOLIO_DATA.personal.name}
               </span>
               <span className="text-[10px] text-slate-400 font-mono tracking-wider">
-                ECE // HW-SW CO-DESIGN
+                EMBEDDED // IOT // AI/ML
               </span>
             </div>
           </Link>
