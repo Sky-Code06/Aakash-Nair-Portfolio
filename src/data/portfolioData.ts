@@ -63,7 +63,7 @@ export const PORTFOLIO_DATA = {
     email: "reachfortheskiez@gmail.com",
     phone: "+91 9591484191",
     location: "Bengaluru / Vellore, India",
-    statusBadge: "Incoming Intern @ Philips • 3rd-Year ECE @ VIT",
+    statusBadge: "3rd-Year ECE @ VIT • Hardware-Software Co-Design",
     socials: {
       github: "https://github.com/Sky-Code06",
       linkedin: "http://www.linkedin.com/in/aakash-nair-6205b5325",
@@ -118,21 +118,6 @@ export const PORTFOLIO_DATA = {
 
   experiences: [
     {
-      id: "philips-intern",
-      role: "Incoming Intern",
-      company: "Philips",
-      location: "Bengaluru, India",
-      period: "Upcoming",
-      status: "Upcoming" as const,
-      description: "Joining Philips to contribute to healthcare engineering, embedded devices, and software solutions.",
-      responsibilities: [
-        "Upcoming internship engagement focusing on next-generation medical technology and systems engineering.",
-        "Bridging core hardware capabilities with reliable, robust enterprise healthcare software standards.",
-      ],
-      technologies: ["Embedded Systems", "Healthcare Tech", "C/C++", "System Architecture"],
-      badgeColor: "cyan" as const,
-    },
-    {
       id: "vfs-global-intern",
       role: "IT Intern",
       company: "VFS Global",
@@ -146,7 +131,7 @@ export const PORTFOLIO_DATA = {
         "Ensured secure and resilient cross-platform communication between CRM and back-office operations.",
       ],
       technologies: ["MuleSoft API", "Salesforce", "BOLT", "LIFT", "DataWeave", "REST APIs", "Integration"],
-      badgeColor: "purple" as const,
+      badgeColor: "cyan" as const,
     },
     {
       id: "digital-electronics-intern",
@@ -162,9 +147,9 @@ export const PORTFOLIO_DATA = {
         "Conducted thorough timing verification and testbench simulations for high-reliability edge conditions.",
       ],
       technologies: ["Verilog", "RTL Design", "Digital Logic", "FSM", "ModelSim / EDA", "FPGA"],
-      badgeColor: "emerald" as const,
+      badgeColor: "purple" as const,
     },
-  ],
+  ] as ExperienceItem[],
 
   projects: [
     {

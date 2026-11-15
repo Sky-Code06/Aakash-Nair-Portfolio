@@ -24,15 +24,14 @@ A modern, highly interactive, and responsive portfolio bridging the worlds of em
 
 1. **Navigation Bar:** Sticky glassmorphic navbar with active section detection, resume download link, and mobile drawer.
 2. **Hero Section:**
-   * Live status indicator: `Incoming Intern @ Philips • 3rd-Year ECE @ VIT`
-   * Interactive multi-tab simulation terminal (`ESP32.c`, `Cloud.tsx`, `MIMO_RF.sim`) displaying live telemetry data.
+   * Live status indicator: `3rd-Year ECE @ VIT • Hardware-Software Co-Design`
+   * Interactive multi-tab simulation terminal (`Verilog_FSM.v`, `Cloud.tsx`, `MIMO_RF.sim`) displaying live telemetry data.
    * Magnetic call-to-actions: "View My Work" & "Contact Me".
 3. **About Me & Skills Matrix:**
    * **Web & Software:** React, Next.js, Tailwind CSS, Vite, Supabase, Vercel, MuleSoft API.
    * **Hardware & Core ECE:** ESP32, Verilog, KiCad, MATLAB, Simulink, CST Studio Suite, Control Systems.
    * **Languages:** Python, Java, C/C++.
 4. **Experience Timeline:**
-   * **Philips** | Incoming Intern (Upcoming)
    * **VFS Global** | IT Intern (June 2026) — MuleSoft API integrations connecting Salesforce, BOLT, and LIFT.
    * **Digital Electronics Internship** | (Feb 2026) — Custom Verilog-based traffic light controller with pedestrian request and emergency override.
 5. **Featured Projects (3D Interactive Tilt Grid):**

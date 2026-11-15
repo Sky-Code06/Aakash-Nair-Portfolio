@@ -27,7 +27,6 @@ export const metadata: Metadata = {
     "Verilog",
     "MuleSoft",
     "IEEE MIMO Patch Antenna",
-    "Philips",
     "VFS Global"
   ],
   authors: [{ name: "Aakash Nair" }],
