@@ -18,13 +18,13 @@ import {
 } from "lucide-react";
 
 export function Hero() {
-  const [activeTab, setActiveTab] = useState<"verilog" | "cloud" | "rf">("verilog");
+  const [activeTab, setActiveTab] = useState<"vibroshield" | "cloud" | "rf">("vibroshield");
 
-  const verilogTelemetry = {
-    fsmState: "S_NORTH_GREEN -> S_YELLOW",
-    pedestrianLatch: "Active (SR Latch Q=1)",
-    overrideState: "Emergency Preempt Ready",
-    clockDivision: "50MHz to 1Hz Verified",
+  const edgeTelemetry = {
+    samplingRate: "200 Hz Hardware Timer",
+    iirFilter: "40 Hz Cutoff (fc=40Hz)",
+    fftWindow: "128-pt Cooley-Tukey Radix-2",
+    modelStatus: "TinyML Autoencoder Active",
   };
 
   return (
@@ -77,13 +77,13 @@ export function Hero() {
             {/* Quick stats / tags */}
             <div className="flex flex-wrap items-center gap-2 pt-1 font-mono text-xs">
               <span className="px-3 py-1 rounded-md bg-cyan-950/40 border border-cyan-800/40 text-cyan-300 flex items-center gap-1.5">
-                <Cpu className="w-3.5 h-3.5" /> Verilog HDL &amp; RTL Design
+                <Cpu className="w-3.5 h-3.5" /> Edge Computing &amp; TinyML
               </span>
               <span className="px-3 py-1 rounded-md bg-purple-950/40 border border-purple-800/40 text-purple-300 flex items-center gap-1.5">
-                <Layers className="w-3.5 h-3.5" /> Full-Stack Next.js
+                <Layers className="w-3.5 h-3.5" /> Full-Stack &amp; Serverless
               </span>
               <span className="px-3 py-1 rounded-md bg-emerald-950/40 border border-emerald-800/40 text-emerald-300 flex items-center gap-1.5">
-                <Radio className="w-3.5 h-3.5" /> RF &amp; Electromagnetics
+                <Radio className="w-3.5 h-3.5" /> RF &amp; Antenna Simulation
               </span>
             </div>
 
@@ -149,14 +149,14 @@ export function Hero() {
 
                 <div className="flex items-center gap-1">
                   <button
-                    onClick={() => setActiveTab("verilog")}
+                    onClick={() => setActiveTab("vibroshield")}
                     className={`px-2 py-0.5 rounded text-[10px] font-mono transition-all ${
-                      activeTab === "verilog"
+                      activeTab === "vibroshield"
                         ? "bg-cyan-500/20 text-cyan-300 border border-cyan-500/40"
                         : "text-slate-400 hover:text-white"
                     }`}
                   >
-                    Verilog_FSM.v
+                    VibroShield.ino
                   </button>
                   <button
                     onClick={() => setActiveTab("cloud")}
@@ -166,7 +166,7 @@ export function Hero() {
                         : "text-slate-400 hover:text-white"
                     }`}
                   >
-                    Cloud.tsx
+                    DevForge.tsx
                   </button>
                   <button
                     onClick={() => setActiveTab("rf")}
@@ -183,37 +183,37 @@ export function Hero() {
 
               {/* Console Body */}
               <div className="p-4 sm:p-5 font-mono text-xs space-y-3 min-h-[310px] flex flex-col justify-between">
-                {activeTab === "verilog" && (
+                {activeTab === "vibroshield" && (
                   <div className="space-y-2.5 text-slate-300">
                     <div className="text-cyan-400 flex items-center justify-between text-[11px]">
-                      <span>// Synthesizable RTL Traffic Controller (FSM)</span>
+                      <span>// VibroShield (Autonomous Edge-SHM)</span>
                       <span className="text-emerald-400 flex items-center gap-1">
-                        <Activity className="w-3 h-3 animate-pulse" /> RTL Synthesized
+                        <Activity className="w-3 h-3 animate-pulse" /> 200Hz Edge FFT
                       </span>
                     </div>
                     <p className="text-slate-400 text-[11px]">
-                      FPGA Synthesis • Glitch-Free Moore FSM • Timing Verified
+                      ESP32 • MPU6050 • TinyML Autoencoder • Physical Mitigation
                     </p>
                     <div className="p-2.5 rounded-lg bg-black/50 border border-cyan-900/40 space-y-1 text-[11px]">
                       <div className="flex justify-between">
-                        <span className="text-slate-400">Current State:</span>
-                        <span className="text-cyan-300 font-bold">{verilogTelemetry.fsmState}</span>
+                        <span className="text-slate-400">Sampling Rate:</span>
+                        <span className="text-cyan-300 font-bold">{edgeTelemetry.samplingRate}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-slate-400">Pedestrian Latch:</span>
-                        <span className="text-cyan-300 font-bold">{verilogTelemetry.pedestrianLatch}</span>
+                        <span className="text-slate-400">Digital Filter:</span>
+                        <span className="text-cyan-300 font-bold">{edgeTelemetry.iirFilter}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-slate-400">Emergency Override:</span>
-                        <span className="text-emerald-400">{verilogTelemetry.overrideState}</span>
+                        <span className="text-slate-400">Spectral Analysis:</span>
+                        <span className="text-emerald-400">{edgeTelemetry.fftWindow}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-slate-400">Clock Generator:</span>
-                        <span className="text-purple-300">{verilogTelemetry.clockDivision}</span>
+                        <span className="text-slate-400">Inference State:</span>
+                        <span className="text-purple-300">{edgeTelemetry.modelStatus}</span>
                       </div>
                     </div>
                     <p className="text-slate-500 text-[10px]">
-                      always @(posedge clk or negedge rst_n) begin state &lt;= next_state; end
+                      float error = compute_autoencoder_reconstruction_loss(&amp;fft_bins);
                     </p>
                   </div>
                 )}
@@ -221,30 +221,30 @@ export function Hero() {
                 {activeTab === "cloud" && (
                   <div className="space-y-2.5 text-slate-300">
                     <div className="text-purple-400 flex items-center justify-between text-[11px]">
-                      <span>// DevForge / CloudCanvas IDE (AWS Winner)</span>
+                      <span>// DevForge IDE (AWS Hackathon Semi-Finalist)</span>
                       <span className="text-cyan-400 flex items-center gap-1">
                         <Zap className="w-3 h-3" /> Event Driven
                       </span>
                     </div>
                     <p className="text-slate-400 text-[11px]">
-                      Next.js 16 • React 19 • TypeScript • Tailwind
+                      Next.js 16 • Bedrock • Lambda • DynamoDB • Price API
                     </p>
                     <div className="p-2.5 rounded-lg bg-black/50 border border-purple-900/40 space-y-1 text-[11px]">
                       <div className="flex justify-between">
                         <span className="text-slate-400">Topology Canvas:</span>
-                        <span className="text-purple-300">Infinite Grid Node-Graph</span>
+                        <span className="text-purple-300">Microservice Node-Graph</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-slate-400">Benchmarking:</span>
-                        <span className="text-purple-300">Latency &amp; TCO Simulator</span>
+                        <span className="text-slate-400">Cost Governance:</span>
+                        <span className="text-purple-300">AWS Price List API Integration</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-slate-400">Target Deploy:</span>
                         <span className="text-cyan-300">Vercel Edge Network</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-slate-400">Hackathon:</span>
-                        <span className="text-amber-300 font-semibold">1st Place Award</span>
+                        <span className="text-slate-400">Recognition:</span>
+                        <span className="text-amber-300 font-semibold">AWS Hackathon Qualifier</span>
                       </div>
                     </div>
                     <p className="text-slate-500 text-[10px]">
@@ -256,7 +256,7 @@ export function Hero() {
                 {activeTab === "rf" && (
                   <div className="space-y-2.5 text-slate-300">
                     <div className="text-emerald-400 flex items-center justify-between text-[11px]">
-                      <span>// IEEE Castle-Shaped MIMO Antenna Paper</span>
+                      <span>// Castle-Shaped MIMO Antenna Project</span>
                       <span className="text-emerald-300 flex items-center gap-1">
                         <Radio className="w-3 h-3" /> CST Studio
                       </span>
@@ -278,8 +278,8 @@ export function Hero() {
                         <span className="text-cyan-300">&lt; 0.005</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-slate-400">Conference:</span>
-                        <span className="text-purple-300">IEEE (Oct 2026)</span>
+                        <span className="text-slate-400">Publication Status:</span>
+                        <span className="text-purple-300">Target: IEEE (To Be Published)</span>
                       </div>
                     </div>
                     <p className="text-slate-500 text-[10px]">

@@ -29,13 +29,13 @@ export function ResearchSection() {
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950/60 border border-emerald-800/50 text-emerald-400 text-xs font-mono">
             <Radio className="w-3.5 h-3.5" />
-            <span>PUBLICATIONS &amp; RESEARCH</span>
+            <span>RESEARCH PROJECT &bull; TO BE PUBLISHED</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Electromagnetics &amp; <span className="text-gradient-hardware">RF Engineering</span>
+            MIMO Antenna Design &amp; <span className="text-gradient-hardware">RF Engineering</span>
           </h2>
           <p className="text-slate-400 text-base sm:text-lg">
-            High-frequency simulation and microstrip design pushing the boundaries of wireless isolation and MIMO diversity.
+            High-frequency CST Studio simulation and microstrip design pushing the boundaries of wireless isolation and MIMO diversity (Simulation verified, prepared for publication).
           </p>
         </div>
 
@@ -201,7 +201,7 @@ export function ResearchSection() {
                 <div className="p-3 rounded-xl bg-emerald-950/20 border border-emerald-800/30 text-[11px] text-slate-300 font-mono flex items-center gap-2">
                   <Activity className="w-4 h-4 text-emerald-400 flex-shrink-0" />
                   <span>
-                    Simulated in CST Studio Suite; results co-authored for IEEE publication.
+                    Simulated in CST Studio Suite; complete simulation verified and prepared for IEEE publication.
                   </span>
                 </div>
               </div>

@@ -35,14 +35,13 @@ A modern, highly interactive, and responsive portfolio bridging the worlds of em
    * **VFS Global** | IT Intern (June 2026) — MuleSoft API integrations connecting Salesforce, BOLT, and LIFT.
    * **Digital Electronics Internship** | (Feb 2026) — Custom Verilog-based traffic light controller with pedestrian request and emergency override.
 5. **Featured Projects (3D Interactive Tilt Grid):**
-   * **DevForge / CloudCanvas:** AWS hackathon-winning system design IDE.
-   * **PokerNight PWA:** Offline-first PWA for game tracking & zero-sum debt settlement.
-   * **Synthesizable RTL Traffic Light Controller:** Verilog FSM with pedestrian request & emergency preemption.
-   * **SmartCharge-Adapt:** Parameter-adaptive MPC framework for Li-ion battery packs in CVXPY & Simulink.
-   * **VTOP Vault:** Automated course material harvester browser extension.
-   * **Store Inventory Command Center:** Mobile-first Next.js/Supabase inventory management with automated WhatsApp dispatch.
-6. **Publications & Research:**
-   * **IEEE Conference Paper (Oct 2026):** Castle-shaped microstrip patch antenna converted into a MIMO configuration with CST Studio Suite simulation analysis ($S_{11} < -20\text{ dB}$, $S_{21} < -25\text{ dB}$, $\text{ECC} < 0.005$).
+   * **VibroShield (Edge-SHM):** Autonomous edge structural health monitoring & TinyML anomaly detection on ESP32.
+   * **SmartCharge-Adapt:** Parameter-adaptive constrained MPC framework for Li-ion battery packs in Python CVXPY & Simulink.
+   * **Active 3-Band Audio Equalizer:** Op-amp active filter signal processing & MATLAB Simulink Audio Toolbox simulation.
+   * **Zero-PII Mental Health Check-In:** Privacy-preserving serverless PWA on AWS architecture (Lambda, DynamoDB, Tone.js).
+   * **DevForge IDE:** Agentic cloud system design & cost governance IDE (AWS Hackathon Semi-Finalist Qualifier).
+6. **Research Projects:**
+   * **Castle-Shaped MIMO Microstrip Patch Antenna (To Be Published):** CST Studio Suite 3D electromagnetic simulation achieving high isolation ($S_{11} < -20\text{ dB}$, $S_{21} < -25\text{ dB}$, $\text{ECC} < 0.005$) and compact multi-band resonance. Prepared for IEEE publication.
 7. **Contact & Footer:**
    * One-click "Copy Email" with celebratory particle confetti.
    * Interactive messaging form with validation.
